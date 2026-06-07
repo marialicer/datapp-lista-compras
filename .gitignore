@@ -1,0 +1,15 @@
+# cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+build/
+dist/
+*.egg-info/
+
+# VS Code
+.vscode/
+
+# Ambiente virtual
+venv/
+.env/

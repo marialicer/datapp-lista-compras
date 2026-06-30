@@ -17,7 +17,7 @@ Para responder isso, o app:
 3. Compara esse intervalo com o tempo que já se passou desde a última compra (`dias_ult_compra`).
 4. Marca como `comprar = True` qualquer produto cujo tempo sem compra (somado a uma margem de dias que você define) ultrapasse o intervalo médio.
 
-Toda essa lógica fica isolada em [`query_inteligente.sql`](query_inteligente.sql), usando CTEs e `LAG()` para calcular a recorrência direto no banco — sem trazer o processamento pesado para o Python.
+Toda essa lógica fica isolada em [`query_inteligente.sql`](query_inteligente.sql), usando CTEs e `LAG()` para calcular a recorrência direto no banco.
 
 ```sql
 -- trecho simplificado da lógica de recorrência
@@ -28,11 +28,11 @@ avg(julianday(dt_compra) - julianday(dt_anterior)) AS avg_diff_dias
 
 ##  Funcionalidades
 
-- ** Login com autorização por e-mail** - usa `st.login()` / `st.user` do Streamlit e libera o acesso apenas para o e-mail definido em `EMAIL_AUTHORIZED`.
-- ** Lista inteligente de recompra** - tabela com produto, última compra, valor médio, intervalo médio entre compras e dias sem comprar, com checkbox indicando o que está "no prazo" de reposição. Dá pra ajustar quantos dias à frente o app deve considerar.
-- ** Registro manual** - adiciona um novo produto e valor diretamente, reaproveitando os produtos já cadastrados via `selectbox`.
-- ** Importação de histórico via CSV** - sobe um arquivo `.csv` com compras antigas, edita os dados em tela (`st.data_editor`) antes de confirmar a gravação.
-- ** Leitura de nota fiscal com IA** - envia uma foto da nota fiscal, e o Gemini 2.0 Flash extrai produto, valor e data automaticamente, devolvendo um JSON estruturado pronto para revisão e gravação no banco.
+- **Login com autorização por e-mail** - usa `st.login()` / `st.user` do Streamlit e libera o acesso apenas para o e-mail definido em `EMAIL_AUTHORIZED`.
+- **Lista inteligente de recompra** - tabela com produto, última compra, valor médio, intervalo médio entre compras e dias sem comprar, com checkbox indicando o que está "no prazo" de reposição. Dá pra ajustar quantos dias à frente o app deve considerar.
+- **Registro manual** - adiciona um novo produto e valor diretamente, reaproveitando os produtos já cadastrados via `selectbox`.
+- **Importação de histórico via CSV** - sobe um arquivo `.csv` com compras antigas, edita os dados em tela (`st.data_editor`) antes de confirmar a gravação.
+- **Leitura de nota fiscal com IA** - envia uma foto da nota fiscal, e o Gemini 2.0 Flash extrai produto, valor e data automaticamente, devolvendo um JSON estruturado pronto para revisão e gravação no banco.
 
 ## Leitura de nota fiscal com Gemini
 

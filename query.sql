@@ -1,0 +1,1 @@
+SELECT DISTINCT produto from compras

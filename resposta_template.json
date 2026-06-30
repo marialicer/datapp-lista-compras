@@ -1,0 +1,22 @@
+[
+  {
+    "dt_compra": "2026-06-04",
+    "produto": "Kiwi",
+    "valor_produto": "9.99"
+  },
+  {
+    "dt_compra": "2026-06-04",
+    "produto": "Queijo",
+    "valor_produto": "8.99"
+  },
+  {
+    "dt_compra": "2026-06-04",
+    "produto": "Milho Verde",
+    "valor_produto": "4.89"
+  },
+  {
+    "dt_compra": "2026-06-04",
+    "produto": "Pãozinho",
+    "valor_produto": "9.49"
+  }
+]

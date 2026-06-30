@@ -1,15 +1,10 @@
-# cache do Python
-__pycache__/
-*.py[cod]
-*$py.class
-.Python
-build/
-dist/
-*.egg-info/
+*.env
+*.jpg
+*.jpeg
+*.csv
+*.db
 
-# VS Code
-.vscode/
+secrets.toml
 
-# Ambiente virtual
-venv/
-.env/
+.vscode
+__pycache__

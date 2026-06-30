@@ -99,6 +99,6 @@ Base do projeto construída em prática acompanhando o [Téo Calvo (Téo Me Why)
 
 ## Autora
 
-Desenvolvido por **Maria Alice Rocha** <br>
+Maria Alice Rocha <br>
 Data Analyst, especialista em Analytics e BI pela PUC Minas <br>
 [GitHub](https://github.com/marialicer) · [Portfólio](https://marialicer.github.io)
